@@ -36,42 +36,46 @@ function Header() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % images.length);
-        }, 5000);
+        }, 8000);
         return () => clearInterval(interval);
     }, [images.length]);
 
     return (
         <div className="opacity-90">
             <motion.div
-                className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
+                className="absolute inset-0 bg-cover bg-center duration-1000"
                 style={{ backgroundImage: `url(${images[currentIndex]})` }}
-                animate={{ opacity: [0, 1] }}
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                exit={{ opacity: -0.5 }}
+                transition={{ duration: 1.9 }}  // Adjusting the transition duration for smoother fade
             >
                 <div className="h-full w-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence>
                         <motion.h1
                             key={content[currentIndex].heading}
                             className="text-4xl md:text-6xl font-bold"
                             initial={{ y: -50, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1 }}
+                            transition={{ duration: 1, delay: 0.5 }}
                         >
                             {content[currentIndex].heading}
                         </motion.h1>
                     </AnimatePresence>
-                    <AnimatePresence mode="wait">
+
+                    <AnimatePresence>
                         <motion.p
                             key={content[currentIndex].text}
                             className="text-lg md:text-xl mt-4 max-w-2xl"
                             initial={{ y: 50, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            transition={{ duration: 1, delay: 0.5 }}
+                            transition={{ duration: 1, delay: 1 }}
                         >
                             {content[currentIndex].text}
                         </motion.p>
                     </AnimatePresence>
 
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence>
                         <motion.button
                             key={content[currentIndex].buttonText}
                             className="mt-6 bg-blue-700 text-white px-6 py-3 rounded-full text-lg"
@@ -82,7 +86,6 @@ function Header() {
                             {content[currentIndex].buttonText}
                         </motion.button>
                     </AnimatePresence>
-
                 </div>
                 <div
                     className="absolute inset-x-0 top-[calc(100%-13rem)] transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
@@ -97,9 +100,7 @@ function Header() {
                     />
                 </div>
             </motion.div>
-
         </div>
-
     );
 }
 
