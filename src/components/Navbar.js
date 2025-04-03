@@ -23,7 +23,7 @@ function Navbar() {
 
 
     return (
-        <div className="relative w-full h-screen z-50">
+        <div className="relative w-full z-50">
             <nav
                 className={`fixed top-0 w-full transition-all duration-300 z-50 flex justify-between items-center px-6 py-4 ${scrolled ? "shadow-lg py-2 bg-blue-950" : "bg-transparent py-6"
                     }`}
@@ -49,7 +49,7 @@ function Navbar() {
             </nav>
 
             {menuOpen && (
-                <div className="fixed top-0 pt-16 left-0 w-full bg-blue-950 text-white flex flex-col items-center py-4 md:hidden opacity-90">
+                <div className="fixed top-0 pt-20 left-0 w-full bg-blue-950 text-white flex flex-col items-center py-4 md:hidden opacity-90">
                     <a href="/" className="py-2">Home</a>
                     <a href="/about" className="py-2">About Us</a>
                     <a href="/contact" className="py-2">Contact</a>
