@@ -41,8 +41,6 @@ function Header() {
     }, [images.length]);
 
     return (
-        <div className="opacity-90">
-            <AnimatePresence exitBeforeEnter>
                 <motion.div
                     key={currentIndex} // Add key to ensure smooth transitions between images
                     className="absolute inset-0 bg-cover bg-center"
@@ -102,8 +100,6 @@ function Header() {
                         />
                     </div>
                 </motion.div>
-            </AnimatePresence>
-        </div>
     );
 }
 
