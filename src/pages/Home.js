@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import Projects from '../components/Projects';
 
 function Home() {
+    useEffect(() => {
+        const hash = window.location.hash;
+        if (hash === "#projects") {
+            const projectsSection = document.getElementById("projects");
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, []);
+
     return (
         <div className='mx-auto justify-center'>
             <Header />
@@ -48,9 +58,8 @@ function Home() {
                     </div>
                 </div>
             </section>
-
         </div>
-    )
+    );
 }
 
-export default Home
+export default Home;
