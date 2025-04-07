@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import ScrollButton from "./components/ScrollButton";
 import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
+import Project from "./pages/Project";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />}/>
         <Route path="/gallery" element={<Gallery />}/>
+        <Route path="/project/:id" element={<Project />}/>
       </Routes>
       <Footer />
       <ScrollButton />

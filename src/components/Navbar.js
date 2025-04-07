@@ -33,10 +33,10 @@ function Navbar() {
                 </div>
                 <div className="hidden md:flex space-x-6 text-white">
                     <a href="/" className="hover:text-gray-300">Home</a>
-                    <a href="/about" className="hover:text-gray-300">About Us</a>
-                    <a href="/contact" className="hover:text-gray-300">Contact</a>
-                    <a href="/gallery" className="hover:text-gray-300">Gallery</a>
-                    <a href="/projects" className="hover:text-gray-300">Projects</a>
+                    <a href="about" className="hover:text-gray-300">About Us</a>
+                    <a href="contact" className="hover:text-gray-300">Contact</a>
+                    <a href="gallery" className="hover:text-gray-300">Gallery</a>
+                    <a href="projects" className="hover:text-gray-300">Projects</a>
                 </div>
                 <button className="hidden md:block bg-blue-700 text-white px-4 py-2 rounded-full">
                     Donate Now!
@@ -51,10 +51,10 @@ function Navbar() {
             {menuOpen && (
                 <div className="fixed top-0 pt-20 left-0 w-full bg-blue-950 text-white flex flex-col items-center py-4 md:hidden opacity-90">
                     <a href="/" className="py-2">Home</a>
-                    <a href="/about" className="py-2">About Us</a>
-                    <a href="/contact" className="py-2">Contact</a>
-                    <a href="/gallery" className="py-2">Gallery</a>
-                    <a href="/projects" className="py-2">Projects</a>
+                    <a href="about" className="py-2">About Us</a>
+                    <a href="contact" className="py-2">Contact</a>
+                    <a href="gallery" className="py-2">Gallery</a>
+                    <a href="projects" className="py-2">Projects</a>
                     <button className="bg-blue-700 text-white px-4 py-2 rounded-full mt-2">
                         Donate Now!
                     </button>

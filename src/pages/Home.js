@@ -2,11 +2,14 @@ import React from 'react'
 import Header from '../components/Header';
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import Projects from '../components/Projects';
 
 function Home() {
     return (
-        <>
+        <div className='mx-auto justify-center'>
             <Header />
+            {/* project news section */}
+            <Projects />
             {/* Contact Information Section */}
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4 text-center">
@@ -45,7 +48,8 @@ function Home() {
                     </div>
                 </div>
             </section>
-        </>
+
+        </div>
     )
 }
 
