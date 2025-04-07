@@ -127,7 +127,7 @@ const Projects = () => {
                                     <p className="text-sm text-gray-500">
                                         {truncateText(item.description, 20)}
                                     </p>
-                                    <div className="mt-2 flex gap-1"><p className="text-gray-100">Status:</p> <span className="text-semibold text-green-300">{item.status}</span></div>
+                                    <div className="mt-2 flex gap-1"><p className="text-gray-500">Status:</p> <span className="text-semibold text-green-300">{item.status}</span></div>
                                     <div className="card-actions justify-between mt-4 w-full">
                                         <Link
                                             to={`/project/${item.id}`}
