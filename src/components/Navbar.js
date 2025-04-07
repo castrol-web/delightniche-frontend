@@ -37,7 +37,7 @@ function Navbar() {
                     <Link to="/about" className="hover:text-gray-300">About Us</Link>
                     <Link to="/contact" className="hover:text-gray-300">Contact</Link>
                     <Link to="/gallery" className="hover:text-gray-300">Gallery</Link>
-                    <Link to="/projects" className="hover:text-gray-300">Projects</Link>
+                    <Link to="/#projects" className="hover:text-gray-300">Projects</Link>
                 </div>
                 <button className="hidden md:block bg-blue-700 text-white px-4 py-2 rounded-full">
                     Donate Now!
@@ -55,7 +55,7 @@ function Navbar() {
                     <Link to="/about" className="py-2">About Us</Link>
                     <Link to="/contact" className="py-2">Contact</Link>
                     <Link to="/gallery" className="py-2">Gallery</Link>
-                    <Link to="/projects" className="py-2">Projects</Link>
+                    <Link to="/#projects" className="py-2">Projects</Link>
                     <button className="bg-blue-700 text-white px-4 py-2 rounded-full mt-2">
                         Donate Now!
                     </button>

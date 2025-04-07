@@ -86,7 +86,7 @@ const Projects = () => {
     );
 
     return (
-        <div className="text-center mx-auto mt-4">
+        <div className="text-center mx-auto mt-4" id="projects">
             <motion.h4 className="text-sm text-orange-700 font-semibold mb-1">
                 Open Your Heart To Support
             </motion.h4>
