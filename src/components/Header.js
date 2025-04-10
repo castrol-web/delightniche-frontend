@@ -91,7 +91,7 @@ const Header = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 grid grid-cols-4 gap-4 w-3/4 md:w-1/2 z-20">
+                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 grid grid-cols-4 w-3/4 md:w-1/2 z-20">
                     <div className="p-4 bg-purple-600 text-white rounded-lg flex flex-col items-center">
                         <FaHeart size={24} />
                         <span className="mt-2">Donate</span>

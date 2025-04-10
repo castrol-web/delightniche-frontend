@@ -5,6 +5,7 @@ import image1 from "../images/image1.jpeg";
 import image2 from "../images/image2.jpg";
 import image3 from "../images/image3.jpg";
 import image4 from "../images/image4.jpeg";
+import MainHeader from "../components/MainHeader";
 
 const images = [
     { src: image1, category: "Nature" },
@@ -48,8 +49,10 @@ export default function Gallery() {
     };
 
     return (
-        <div className="items-center pt-20 justify-center mx-auto text-center">
-            <div className="mx-auto items-center justify-center flex gap-4 mb-6">
+        <div className="items-center justify-center mx-auto text-center">
+            <MainHeader Title='Our Gallery' description=";lkjhfgdstyuiuoiop'opiuytrestrdtfy'opoturyetrthijopk
+        'oituryetdrtguhijop[p'oirytipk" />
+            <div className="mx-auto items-center justify-center flex gap-4 my-6">
                 {categories.map((category) => (
                     <button
                         key={category}
@@ -62,7 +65,7 @@ export default function Gallery() {
             </div>
 
             <motion.div
-                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 items-center text-center justify-center mx-auto"
+                className="grid mb-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 items-center text-center justify-center mx-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}

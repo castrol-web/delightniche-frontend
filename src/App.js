@@ -3,7 +3,6 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollButton from "./components/ScrollButton";
-import Contact from "./pages/Contact";
 import Gallery from "./pages/Gallery";
 import Project from "./pages/Project";
 
@@ -13,7 +12,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />}/>
         <Route path="/gallery" element={<Gallery />}/>
         <Route path="/project/:id" element={<Project />}/>
       </Routes>

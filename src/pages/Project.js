@@ -66,7 +66,6 @@ function Project() {
                 </motion.div>
             </div>
         </>
-
     );
 };
 

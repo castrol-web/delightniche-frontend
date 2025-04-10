@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function MainHeader({ Title, description }) {
     return (
-        <div className="relative bg-gradient-to-r from-blue-500 to-orange-400 min-h-[300px] text-white flex items-center justify-center">
+        <div className="bg-gradient-to-r from-blue-500 to-orange-400 min-h-[300px] text-white flex items-center justify-center">
             {/* Background Pattern with Opacity */}
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/triangle.png')] bg-opacity-30"></div>
 

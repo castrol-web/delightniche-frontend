@@ -21,6 +21,7 @@ function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    //scrolling to projects section
     const scrollToProjects = () => {
         navigate("/", { replace: true }); // Navigate to home if not already there
         setTimeout(() => {
@@ -31,8 +32,32 @@ function Navbar() {
         }, 0);
     };
 
+    //scrolling to contacts section behavior
+    const scrollToContact = ()=>{
+        navigate('/');
+        setTimeout(()=>{
+            //capturing contacts section
+            const contactSection = document.getElementById("contact");
+            if(contactSection){
+                contactSection.scrollIntoView({behavior:"smooth"})
+            }
+        })
+    }
+
+     //scrolling to about us section behavior
+     const scrollToAbout = ()=>{
+        navigate('/');
+        setTimeout(()=>{
+            //capturing contacts section
+            const aboutSection = document.getElementById("about");
+            if(aboutSection){
+                aboutSection.scrollIntoView({behavior:"smooth"})
+            }
+        })
+    }
+
     return (
-        <div className="relative w-full z-50">
+        <div className="w-full z-50">
             <nav
                 className={`fixed top-0 w-full transition-all duration-300 z-50 flex justify-between items-center px-6 py-4 ${scrolled ? "shadow-lg py-2 bg-blue-950" : "bg-transparent py-6"
                     }`}
@@ -42,8 +67,8 @@ function Navbar() {
                 </div>
                 <div className="hidden md:flex space-x-6 text-white">
                     <Link to="/" className="hover:text-gray-300">Home</Link>
-                    <Link to="/about" className="hover:text-gray-300">About Us</Link>
-                    <Link to="/contact" className="hover:text-gray-300">Contact</Link>
+                    <button onClick={scrollToAbout} className="hover:text-gray-300">About Us</button>
+                    <button onClick={scrollToContact} className="hover:text-gray-300">Contact</button>
                     <Link to="/gallery" className="hover:text-gray-300">Gallery</Link>
                     <button onClick={scrollToProjects} className="hover:text-gray-300">Projects</button>
                 </div>
@@ -56,10 +81,10 @@ function Navbar() {
             </nav>
 
             {menuOpen && (
-                <div className="fixed top-0 pt-20 left-0 w-full bg-blue-950 text-white flex flex-col items-center py-4 md:hidden opacity-90">
+                <div className="fixed z-50 top-0 mt-16 left-0 w-full bg-blue-950 text-white flex flex-col items-center py-4 md:hidden opacity-90">
                     <Link to="/" className="py-2">Home</Link>
-                    <Link to="/about" className="py-2">About Us</Link>
-                    <Link to="/contact" className="py-2">Contact</Link>
+                    <button onClick={scrollToAbout} className="py-2">About Us</button>
+                    <button onClick={scrollToContact} className="py-2">Contact</button>
                     <Link to="/gallery" className="py-2">Gallery</Link>
                     <button onClick={scrollToProjects} className="py-2">Projects</button>
                     <button className="bg-blue-700 text-white px-4 py-2 rounded-full mt-2">
